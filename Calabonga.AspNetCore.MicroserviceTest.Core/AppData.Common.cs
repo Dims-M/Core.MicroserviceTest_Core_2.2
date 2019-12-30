@@ -15,7 +15,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Core
         /// <summary>
         /// "BusinessOwner"
         /// </summary>
-        public const string CompanyRoleName = "Company";
+        public const string CompanyRoleName = "Customer"; // Текущая роль. Покупатель
 
         /// <summary>
         /// Roles
