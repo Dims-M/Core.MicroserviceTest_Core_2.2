@@ -8,17 +8,17 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Core
     public static partial class AppData
     {
         /// <summary>
-        /// "SystemAdministrator"
+        /// "Администратор SystemAdministrator"
         /// </summary>
         public const string SystemAdministratorRoleName = "Administrator";
 
         /// <summary>
-        /// "BusinessOwner"
+        /// "Пользователь BusinessOwner"
         /// </summary>
         public const string CompanyRoleName = "Customer"; // Текущая роль. Покупатель
 
         /// <summary>
-        /// Roles
+        /// Роли Roles
         /// </summary>
         public static IEnumerable<string> Roles
         {
@@ -30,7 +30,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Core
         }
 
         /// <summary>
-        /// IdentityServer4 path
+        ///Путь интификации IdentityServer4 path
         /// </summary>
         public const string AuthUrl = "/auth";
     }
