@@ -30,7 +30,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Data.DatabaseInitialization
                     }
                 }
 
-                #region developer
+                #region  developer //Информация о пользователе
                 var developer1 = new ApplicationUser
                 {
                     Email = "microservice@yopmail.com",
