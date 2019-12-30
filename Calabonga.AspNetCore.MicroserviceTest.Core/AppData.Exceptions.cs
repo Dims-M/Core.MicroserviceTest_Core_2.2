@@ -3,7 +3,7 @@
     public static partial class AppData
     {
         /// <summary>
-        /// Exception messages
+        ///Сообщения об ошибках Exception messages
         /// </summary>
         public static class Exceptions
         {

@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace Calabonga.AspNetCore.MicroserviceTest.Web.AppStart
 {
     /// <summary>
-    /// Pipeline configuration
+    /// Основные конфигуорации конвеера зависимостей Pipeline configuration
     /// </summary>
     public static class ConfigureApplication
     {

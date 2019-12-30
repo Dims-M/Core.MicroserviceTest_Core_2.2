@@ -4,6 +4,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Core
 {
     /// <summary>
     /// Static data container
+    /// Набор констант используемых во всем проекте
     /// </summary>
     public static partial class AppData
     {

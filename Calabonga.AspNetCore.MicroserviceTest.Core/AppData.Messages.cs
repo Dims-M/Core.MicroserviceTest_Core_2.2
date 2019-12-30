@@ -3,14 +3,15 @@
     public static partial class AppData
     {
         /// <summary>
-        /// Common messages
+        /// Стандартные сообщения. Используемые в программе Common messages
         /// </summary>
         public static class Messages
         {
             /// <summary>
-            /// "User successfully registered"
+            /// "Пользователь успешно зарегистрирован 
+            /// User successfully registered"
             /// </summary>
-            public static string UserSuccessfullyRegistered => "User successfully registered";
+            public static string UserSuccessfullyRegistered => "Пользователь успешно зарегистрирован (User successfully registered)";
 
             /// <summary>
             /// "Hotel successfully saved"
