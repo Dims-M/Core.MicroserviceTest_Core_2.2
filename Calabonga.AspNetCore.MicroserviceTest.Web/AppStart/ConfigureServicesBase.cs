@@ -21,7 +21,7 @@ using Newtonsoft.Json.Serialization;
 namespace Calabonga.AspNetCore.MicroserviceTest.Web.AppStart
 {
     /// <summary>
-    /// ASP.NET Core services registration and configurations
+    /// ASP.NET Core регистрация и настройка сервисов services registration and configurations
     /// </summary>
     public static class ConfigureServicesBase
     {

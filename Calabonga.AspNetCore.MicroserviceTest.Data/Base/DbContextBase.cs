@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Calabonga.AspNetCore.MicroserviceTest.Data.Base
 {
     /// <summary>
+    /// Базовый DbContext с предопределенной конфигурацией
     /// Base DbContext with predefined configuration
     /// </summary>
     public abstract class DbContextBase : IdentityDbContext<ApplicationUser, ApplicationRole, Guid>

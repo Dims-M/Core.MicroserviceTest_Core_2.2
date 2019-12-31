@@ -4,7 +4,7 @@ using Calabonga.AspNetCore.MicroserviceTest.Models.Base;
 namespace Calabonga.AspNetCore.MicroserviceTest.Models
 {
     /// <summary>
-    /// Logs
+    /// Обьект логирования Logs. Для записи в БД
     /// </summary>
     public class Log : Identity
     {
