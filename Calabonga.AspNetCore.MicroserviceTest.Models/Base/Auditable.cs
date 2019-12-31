@@ -3,6 +3,8 @@
 namespace Calabonga.AspNetCore.MicroserviceTest.Models.Base
 {
     /// <summary>
+    /// Представляет "Аудируемую" таблицу из базы данных свойств.
+    /// Возможность узнать когда, кем  были введены изменения в таблице
     /// Represents 'Audit-able' table from the Property Database
     /// </summary>
     public abstract class Auditable : Identity, IAuditable
