@@ -61,6 +61,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base
         #region PostAsync
 
         /// <summary>
+        /// Возвращает предопределенную модель представления для операции создания сущности.
         /// Returns predefined ViewModel for entity create operation.
         /// </summary>
         /// <returns></returns>
@@ -72,6 +73,8 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base
         }
 
         /// <summary>
+        /// Создает сущность. Для создания модели представления вы можете использовать {сделать-создать-модель представления} метод
+        /// получить viewModel с предопределенными свойствами
         /// Creates entity. For viewModel generation you can use {get-create-viewmodel} method to
         /// get viewModel with predefined properties
         /// </summary>
@@ -153,6 +156,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base
         #region PutAsync
 
         /// <summary>
+        /// Возвращает предопределенную модель представления для операции создания сущности.
         /// Returns predefined ViewModel for entity create operation.
         /// </summary>
         /// <returns></returns>
@@ -164,6 +168,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base
         }
 
         /// <summary>
+        /// Обновляет сущность. Для создания модели представления вы можете использовать {сделать-создать-модель представления} способ получить модель представления с заданными свойствами
         /// Updates entity. For viewModel generation you can use {get-create-viewmodel} method to get viewModel with predefined properties
         /// </summary>
         /// <param name="id"></param>
@@ -249,6 +254,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base
 
         #region DeleteAsync
         /// <summary>
+        /// Удаляет объект из репозитория по идентификатору и возвращает его в качестве ответа
         /// Deletes entity from repository by identifier and return it as response
         /// </summary>
         /// <param name="id"></param>
@@ -293,6 +299,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base
         #region Helpers
 
         /// <summary>
+        /// Заполняет свойства аудита
         /// Fills the audit properties
         /// </summary>
         /// <param name="entity"></param>
@@ -312,6 +319,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base
         }
 
         /// <summary>
+        /// Возвращает сущность из базы данных по умолчанию без каких-либо включений
         /// Returns entity from database by default without any includes
         /// </summary>
         /// <param name="id"></param>
@@ -329,6 +337,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base
 
 
         /// <summary>
+        /// Проверяет права доступа пользователей
         /// Validates user access permissions
         /// </summary>
         /// <param name="entity"></param>

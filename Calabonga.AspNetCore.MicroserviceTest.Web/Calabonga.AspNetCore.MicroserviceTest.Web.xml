@@ -455,12 +455,15 @@
         </member>
         <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base.WritableController`5.GetCreateViewModel">
             <summary>
+            Возвращает предопределенную модель представления для операции создания сущности.
             Returns predefined ViewModel for entity create operation.
             </summary>
             <returns></returns>
         </member>
         <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base.WritableController`5.PostAsync(`1)">
             <summary>
+            Создает сущность. Для создания модели представления вы можете использовать {сделать-создать-модель представления} метод
+            получить viewModel с предопределенными свойствами
             Creates entity. For viewModel generation you can use {get-create-viewmodel} method to
             get viewModel with predefined properties
             </summary>
@@ -469,12 +472,14 @@
         </member>
         <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base.WritableController`5.GetUpdateViewModel(System.Guid)">
             <summary>
+            Возвращает предопределенную модель представления для операции создания сущности.
             Returns predefined ViewModel for entity create operation.
             </summary>
             <returns></returns>
         </member>
         <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base.WritableController`5.PutAsync(System.Guid,`2)">
             <summary>
+            Обновляет сущность. Для создания модели представления вы можете использовать {сделать-создать-модель представления} способ получить модель представления с заданными свойствами
             Updates entity. For viewModel generation you can use {get-create-viewmodel} method to get viewModel with predefined properties
             </summary>
             <param name="id"></param>
@@ -483,6 +488,7 @@
         </member>
         <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base.WritableController`5.DeleteAsync(System.Guid)">
             <summary>
+            Удаляет объект из репозитория по идентификатору и возвращает его в качестве ответа
             Deletes entity from repository by identifier and return it as response
             </summary>
             <param name="id"></param>
@@ -490,6 +496,7 @@
         </member>
         <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base.WritableController`5.UpdateAuditAsync(`0,Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Services.IAccountService)">
             <summary>
+            Заполняет свойства аудита
             Fills the audit properties
             </summary>
             <param name="entity"></param>
@@ -498,6 +505,7 @@
         </member>
         <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base.WritableController`5.FindEntity(System.Guid,`2)">
             <summary>
+            Возвращает сущность из базы данных по умолчанию без каких-либо включений
             Returns entity from database by default without any includes
             </summary>
             <param name="id"></param>
@@ -506,19 +514,25 @@
         </member>
         <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base.WritableController`5.ValidateRolesAndRights(`0)">
             <summary>
+            Проверяет права доступа пользователей
             Validates user access permissions
             </summary>
             <param name="entity"></param>
             <returns></returns>
         </member>
+        <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoriesController">
+            <summary>
+            Контроллер для работы с категориями
+            </summary>
+        </member>
         <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.LogController">
              <summary>
-            Контроллер Лога. 
+            Контроллер Лога . 
              </summary>
         </member>
         <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.LogController.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Options.IOptions{Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Settings.CurrentAppSettings},Calabonga.EntityFrameworkCore.UnitOfWork.IUnitOfWork{Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationDbContext,Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationUser,Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationRole},Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Services.IAccountService)">
             <summary>
-            Конструктор по умолчанию
+            Конструктор по умолчанию.
             </summary>
             <param name="mapper"></param>
             <param name="options"></param>
