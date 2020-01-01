@@ -10,6 +10,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Models
  /// </summary>
     public class Category : Identity //Получаем  Guid Id
     {
+        
         //Имя католога
         /// <summary>
         /// Имя Католога

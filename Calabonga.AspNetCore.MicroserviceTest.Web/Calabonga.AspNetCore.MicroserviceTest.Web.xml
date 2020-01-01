@@ -525,12 +525,43 @@
             Контроллер для работы с категориями
             </summary>
         </member>
-        <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.LogController">
+        <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryValidator">
+            <summary>
+            Класс для проверки сущностей Категории 
+            </summary>
+        </member>
+        <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryViewModelFactory">
+            <summary>
+            Обноо CategoryViewModelFactory
+            </summary>
+        </member>
+        <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryViewModelFactory.#ctor(AutoMapper.IMapper,Calabonga.EntityFrameworkCore.UnitOfWork.IUnitOfWork{Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationDbContext,Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationUser,Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationRole})">
+            <summary>
+            gfnyu
+            </summary>
+            <param name="mapper">Поставщик конфигурации для выполнения Ьфз(карт)</param>
+            <param name="unitOfWork"></param>
+        </member>
+        <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryViewModelFactory.GenerateForCreate">
+            <summary>
+            Создание вьюхи катергории из панели управления свагера
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryViewModelFactory.GenerateForUpdate(System.Guid)">
+            <summary>
+            Обновлнеие вьюхи по id из панели управления свагера
+            Запрос по idсущностью  из базы данных
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.LogsController">
              <summary>
             Контроллер Лога . 
              </summary>
         </member>
-        <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.LogController.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Options.IOptions{Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Settings.CurrentAppSettings},Calabonga.EntityFrameworkCore.UnitOfWork.IUnitOfWork{Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationDbContext,Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationUser,Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationRole},Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Services.IAccountService)">
+        <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.LogsController.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Options.IOptions{Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Settings.CurrentAppSettings},Calabonga.EntityFrameworkCore.UnitOfWork.IUnitOfWork{Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationDbContext,Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationUser,Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationRole},Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Services.IAccountService)">
             <summary>
             Конструктор по умолчанию.
             </summary>
@@ -1177,8 +1208,14 @@
             <param name="context">Resolution context</param>
             <returns>Destination object</returns>
         </member>
+        <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Mappers.CategoryMapperConfiguration">
+            <summary>
+            Настройки Map, Словаря 
+            </summary>
+        </member>
         <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Mappers.LogMapperConfiguration">
             <summary>
+            Конфигурации маппер для  журналa событий
             Mapper Configuration for entity Log
             </summary>
         </member>
@@ -2031,37 +2068,37 @@
             Exception message
             </summary>
         </member>
-        <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.LogViewModel">
+        <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel">
             <summary>
             Log ViewModel
             </summary>
         </member>
-        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.LogViewModel.CreatedAt">
+        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel.CreatedAt">
             <summary>
             Created at
             </summary>
         </member>
-        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.LogViewModel.Logger">
+        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel.Logger">
             <summary>
             Logger name
             </summary>
         </member>
-        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.LogViewModel.Level">
+        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel.Level">
             <summary>
             Level
             </summary>
         </member>
-        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.LogViewModel.Message">
+        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel.Message">
             <summary>
             Message text
             </summary>
         </member>
-        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.LogViewModel.ThreadId">
+        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel.ThreadId">
             <summary>
             Thread ID
             </summary>
         </member>
-        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.LogViewModel.ExceptionMessage">
+        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel.ExceptionMessage">
             <summary>
             
             </summary>
