@@ -55,11 +55,13 @@
         </member>
         <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.AppStart.ConfigureServicesSwagger">
             <summary>
+            Конфигурация сервера Свагера
             Swagger configuration
             </summary>
         </member>
         <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.AppStart.ConfigureServicesSwagger.Configure(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
+            Конфигурация сервера Свагера сервисов
             Configure Swagger services
             </summary>
             <param name="services"></param>
@@ -319,6 +321,7 @@
         </member>
         <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base.ReadOnlyController`3">
             <summary>
+            Представлять контроллер операций только для чтения для сущности.
             Represent read only operations controller for entity. It's not required special ViewModels and other things
             </summary>
             <typeparam name="TEntity"></typeparam>
@@ -507,6 +510,20 @@
             </summary>
             <param name="entity"></param>
             <returns></returns>
+        </member>
+        <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.LogController">
+             <summary>
+            Контроллер Лога. 
+             </summary>
+        </member>
+        <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.LogController.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Options.IOptions{Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Settings.CurrentAppSettings},Calabonga.EntityFrameworkCore.UnitOfWork.IUnitOfWork{Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationDbContext,Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationUser,Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationRole},Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Services.IAccountService)">
+            <summary>
+            Конструктор по умолчанию
+            </summary>
+            <param name="mapper"></param>
+            <param name="options"></param>
+            <param name="unitOfWork"></param>
+            <param name="accountService"></param>
         </member>
         <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.ValuesController">
             <summary>

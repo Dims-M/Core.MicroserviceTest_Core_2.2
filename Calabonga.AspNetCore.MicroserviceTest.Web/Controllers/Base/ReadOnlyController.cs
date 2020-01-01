@@ -22,6 +22,7 @@ using Microsoft.Extensions.Options;
 namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base
 {
     /// <summary>
+    /// Представлять контроллер операций только для чтения для сущности.
     /// Represent read only operations controller for entity. It's not required special ViewModels and other things
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>

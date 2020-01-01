@@ -13,16 +13,18 @@ using Swashbuckle.AspNetCore.SwaggerUI;
 namespace Calabonga.AspNetCore.MicroserviceTest.Web.AppStart
 {
     /// <summary>
+    /// Конфигурация сервера Свагера
     /// Swagger configuration
     /// </summary>
     public static class ConfigureServicesSwagger
     {
-        private const string AppTitle = "Microservice API";
+        private const string AppTitle = "Catalog API"; // на титульной странице
         private const string AppVersion = "1.0.0-alpha-1";
         private const string SwaggerConfig = "/swagger/v1/swagger.json";
         private const string SwaggerUrl = "api/manual";
 
         /// <summary>
+        /// Конфигурация сервера Свагера сервисов
         /// Configure Swagger services
         /// </summary>
         /// <param name="services"></param>
@@ -35,7 +37,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.AppStart
                 {
                     Title = AppTitle,
                     Version = AppVersion,
-                    Description = "Microservice API documentation"
+                    Description = "Catalog API documentation" // описание
                 });
                 options.ResolveConflictingActions(x => x.First());
                 options.DescribeAllEnumsAsStrings();
@@ -55,7 +57,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.AppStart
                     TokenUrl = $"{url}/auth/connect/token",
                     Scopes = new Dictionary<string, string>
                 {
-                { "api1", "API Default" }
+                { "api1", "Catalog API Default" }
                 }
                 });
 
@@ -75,7 +77,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.AppStart
         {
             settings.SwaggerEndpoint(SwaggerConfig, $"{AppTitle} v.{AppVersion}");
             settings.RoutePrefix = SwaggerUrl;
-            settings.DocumentTitle = "API documentation";
+            settings.DocumentTitle = "Catalog API documentation";
             settings.DefaultModelExpandDepth(0);
             settings.DefaultModelRendering(ModelRendering.Model);
             settings.DefaultModelsExpandDepth(0);
