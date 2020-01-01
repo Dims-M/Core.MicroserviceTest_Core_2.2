@@ -8,7 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CategoryViewModel = Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryViewModel;
+//using CategoryViewModel = Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryViewModel;
+
 
 namespace Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Mappers
 {
@@ -20,11 +21,11 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Mappers
         public CategoryMapperConfiguration()
         {
 
-        CreateMap<Category, CategoryViewModel>();
+        CreateMap<Category, Controllers.CategoryViewModel>();
         CreateMap<Category, CategoryUpdateViewModel>();
 
-            CreateMap<IPagedList<Category>, IPagedList<CategoryViewModel>>()
-                .ConvertUsing<PagedListConverter<Category, CategoryViewModel>>();
+            CreateMap<IPagedList<Category>, IPagedList<Controllers.CategoryViewModel>>()
+                .ConvertUsing<PagedListConverter<Category, Controllers.CategoryViewModel>>();
 }
     }
 }
