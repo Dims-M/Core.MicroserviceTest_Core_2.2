@@ -28,5 +28,6 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Models
        /// Колекция
        /// </summary>
         public virtual ICollection <Product> Products { get; set; }
+      //  public object Logger { get; set; }
     }
 }

@@ -1,10 +1,14 @@
 ﻿using Calabonga.AspNetCore.MicroserviceTest.Models;
+using Calabonga.AspNetCore.MicroserviceTest.Web.Controllers;
 using Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Mappers.Base;
 using Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels;
+//using Calabonga.PagedListLiteCore;
+using Calabonga.EntityFrameworkCore.UnitOfWork;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CategoryViewModel = Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryViewModel;
 
 namespace Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Mappers
 {
@@ -13,11 +17,14 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Mappers
     /// </summary>
     public class CategoryMapperConfiguration : MapperConfigurationBase
     {
+        public CategoryMapperConfiguration()
+        {
 
-        CreateMap<Category, LogViewModel>();
+        CreateMap<Category, CategoryViewModel>();
+        CreateMap<Category, CategoryUpdateViewModel>();
 
-            CreateMap<IPagedList<Log>, IPagedList<LogViewModel>>()
-                .ConvertUsing<PagedListConverter<Log, LogViewModel>>();
-
+            CreateMap<IPagedList<Category>, IPagedList<CategoryViewModel>>()
+                .ConvertUsing<PagedListConverter<Category, CategoryViewModel>>();
+}
     }
 }
