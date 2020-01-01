@@ -8,6 +8,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Data
     /// <summary>
     /// Абстракция для базы данных
     /// Abstraction for Database (EntityFramework)
+    /// 
     /// </summary>
     public interface IApplicationDbContext
     {
