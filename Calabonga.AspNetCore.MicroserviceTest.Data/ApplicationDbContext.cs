@@ -14,8 +14,8 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Data
             : base(options) { }
 
         #region Бизнес логика
-        public DbSet<Category> Categories { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-        public DbSet<Product> Products { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         #endregion
 

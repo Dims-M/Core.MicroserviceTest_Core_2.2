@@ -125,6 +125,23 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Data.Migrations
                     b.ToTable("Profiles");
                 });
 
+            modelBuilder.Entity("Calabonga.AspNetCore.MicroserviceTest.Models.Category", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(1024);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("Calabonga.AspNetCore.MicroserviceTest.Models.Log", b =>
                 {
                     b.Property<Guid>("Id")
@@ -153,6 +170,40 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Logs");
+                });
+
+            modelBuilder.Entity("Calabonga.AspNetCore.MicroserviceTest.Models.Product", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<Guid>("CategoryId");
+
+                    b.Property<DateTime>("CreatedAt");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasMaxLength(256);
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(1024);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(128);
+
+                    b.Property<int?>("Price");
+
+                    b.Property<DateTime?>("UpdatedAt");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("Product");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -268,6 +319,14 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Data.Migrations
                     b.HasOne("Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationUser", "ApplicationUser")
                         .WithMany()
                         .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Calabonga.AspNetCore.MicroserviceTest.Models.Product", b =>
+                {
+                    b.HasOne("Calabonga.AspNetCore.MicroserviceTest.Models.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
