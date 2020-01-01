@@ -1,26 +1,23 @@
 ﻿using Calabonga.AspNetCore.MicroserviceTest.Models;
 using Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Mappers.Base;
 using Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels;
-using Calabonga.EntityFrameworkCore.UnitOfWork;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Mappers
 {
     /// <summary>
-    /// Конфигурации маппер для  журналa событий
-    /// Mapper Configuration for entity Log
+    /// Настройки Map, Словаря 
     /// </summary>
-    public class LogMapperConfiguration : MapperConfigurationBase
+    public class CategoryMapperConfiguration : MapperConfigurationBase
     {
-        /// <inheritdoc />
-        public LogMapperConfiguration()
-        {
-            //CreateMap<LogCreateViewModel, Log>()
-            //    .ForMember(x => x.Id, o => o.Ignore());
 
-            CreateMap<Category, LogViewModel>();
+        CreateMap<Category, LogViewModel>();
 
             CreateMap<IPagedList<Log>, IPagedList<LogViewModel>>()
                 .ConvertUsing<PagedListConverter<Log, LogViewModel>>();
-        }
+
     }
 }

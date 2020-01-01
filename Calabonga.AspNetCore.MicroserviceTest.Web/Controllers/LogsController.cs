@@ -18,7 +18,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers
     /// <summary>
     ///Контроллер Лога . 
     /// </summary>
-    public class LogController : ReadOnlyController<Log, LogViewModel, PagedListQueryParams>
+    public class LogsController : ReadOnlyController<Category, LogViewModel, PagedListQueryParams>
     {
         /// <summary>
         /// Конструктор по умолчанию.
@@ -27,7 +27,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers
         /// <param name="options"></param>
         /// <param name="unitOfWork"></param>
         /// <param name="accountService"></param>
-        public LogController(IMapper mapper, IOptions<CurrentAppSettings> options, IUnitOfWork<ApplicationDbContext, ApplicationUser, ApplicationRole> unitOfWork, IAccountService accountService) 
+        public LogsController(IMapper mapper, IOptions<CurrentAppSettings> options, IUnitOfWork<ApplicationDbContext, ApplicationUser, ApplicationRole> unitOfWork, IAccountService accountService) 
              : base(mapper, options, unitOfWork, accountService)
         {
         }

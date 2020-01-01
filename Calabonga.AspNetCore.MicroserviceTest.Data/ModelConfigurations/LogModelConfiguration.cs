@@ -8,9 +8,9 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Data.ModelConfigurations
     /// <summary>
     /// Entity Type Configuration for Log entity
     /// </summary>
-    public class LogModelConfiguration : IdentityModelConfigurationBase<Log>
+    public class LogModelConfiguration : IdentityModelConfigurationBase<Category>
     {
-        protected override void AddBuilder(EntityTypeBuilder<Log> builder)
+        protected override void AddBuilder(EntityTypeBuilder<Category> builder)
         {
             builder.Property(x => x.Logger).HasMaxLength(255).IsRequired();
             builder.Property(x => x.Level).HasMaxLength(50).IsRequired();

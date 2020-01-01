@@ -28,7 +28,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Data
 
         #region System
 
-        DbSet<Log> Logs { get; set; }
+        DbSet<Category> Logs { get; set; }
 
         DbSet<ApplicationUser> Users { get; set; }
 

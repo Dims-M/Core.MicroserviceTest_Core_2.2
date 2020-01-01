@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using Calabonga.AspNetCore.MicroserviceTest.Core.Exceptions;
 using Calabonga.AspNetCore.MicroserviceTest.Data;
 using Calabonga.AspNetCore.MicroserviceTest.Models;
 using Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.Base;
@@ -10,6 +12,7 @@ using Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Managers.Base;
 using Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.QueryParams;
 using Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Services;
 using Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Settings;
+using Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Validations.Base;
 using Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels;
 using Calabonga.EntityFrameworkCore.UnitOfWork;
 using Microsoft.Extensions.Options;
@@ -38,5 +41,72 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers
 
     public class CategoryCreateViewModel : IViewModel
     {
+
     }
+
+    /// <summary>
+    /// Класс для проверки сущностей Категории 
+    /// </summary>
+    public class CategoryValidator : EntityValidator<Category>
+    {
+        public CategoryValidator(IRepositoryFactory factory) 
+            : base(factory)
+        {
+        }
+    }
+
+    /// <summary>
+    /// Обноо CategoryViewModelFactory
+    /// </summary>
+    public class CategoryViewModelFactory : ViewModelFactory<Category, CategoryCreateViewModel, CategoryUpdateViewModel>
+    {
+        public IUnitOfWork<ApplicationDbContext, ApplicationUser, ApplicationRole> _unitOfWork;
+        private IMapper _mapper;
+
+        //Конструктор по умолчанию
+        /// <summary>
+        /// gfnyu
+        /// </summary>
+        /// <param name="mapper">Поставщик конфигурации для выполнения Ьфз(карт)</param>
+        /// <param name="unitOfWork"></param>
+        public CategoryViewModelFactory(
+            IMapper mapper,
+            IUnitOfWork<ApplicationDbContext,ApplicationUser,ApplicationRole> unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
+        }
+
+        
+
+        /// <summary>
+        /// Создание вьюхи катергории из панели управления свагера
+        /// </summary>
+        /// <returns></returns>
+        public override CategoryCreateViewModel GenerateForCreate()
+        {
+            return new CategoryCreateViewModel();
+        }
+
+        /// <summary>
+        /// Обновлнеие вьюхи по id из панели управления свагера
+        /// Запрос по idсущностью  из базы данных
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public override CategoryUpdateViewModel GenerateForUpdate(Guid id)
+        {
+            //Соединяемся с таблицой  в БД. и дергаем их бд iD
+            var category = _unitOfWork.GetRepository<Category>().GetFirstOrDefault(predicate: x => x.Id == id) ;
+
+            if (category == null)
+            {   //выбиваем ошибку самодельную(переопределенную)  NullException
+                throw new MicroserviceArgumentNullException();
+            }
+           // var viewModel = _mapper.Map<CategoryUpdateViewModel>(category);
+
+            return   _mapper.Map<CategoryUpdateViewModel>(category); // CategoryUpdateViewModel();
+        }
+    }
+
 }
