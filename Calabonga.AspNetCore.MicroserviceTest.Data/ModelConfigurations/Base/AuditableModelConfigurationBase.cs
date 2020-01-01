@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace Calabonga.AspNetCore.MicroserviceTest.Data.ModelConfigurations.Base
 {
     /// <summary>
+    /// базовоя Модель конфигурации проверки и  аудита 
     /// Audit-able Model Configuration base
     /// </summary>
     /// <typeparam name="T"></typeparam>
@@ -18,21 +19,24 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Data.ModelConfigurations.Base
             builder.Property(x => x.Id).IsRequired();
 
             // audit
-            builder.Property(x => x.CreatedAt).IsRequired().HasConversion(v => v, v => DateTime.SpecifyKind(v, DateTimeKind.Utc)).IsRequired();
+           // builder.Property(x => x.CreatedAt).IsRequired().HasConversion(v => v, v => DateTime.SpecifyKind(v, DateTimeKind.Utc)).IsRequired(); настройки времени 
+            builder.Property(x => x.CreatedAt).IsRequired().HasConversion(v => v, v => DateTime.SpecifyKind(v, DateTimeKind.Local)).IsRequired();
             builder.Property(x => x.CreatedBy).HasMaxLength(256).IsRequired();
-            builder.Property(x => x.UpdatedAt).HasConversion(v => v.Value, v => DateTime.SpecifyKind(v, DateTimeKind.Utc));
+           // builder.Property(x => x.UpdatedAt).HasConversion(v => v.Value, v => DateTime.SpecifyKind(v, DateTimeKind.Utc));
+            builder.Property(x => x.UpdatedAt).HasConversion(v => v.Value, v => DateTime.SpecifyKind(v, DateTimeKind.Local));
             builder.Property(x => x.UpdatedBy).HasMaxLength(256);
 
             AddBuilder(builder);
         }
 
         /// <summary>
-        /// Add custom properties for your entity
+        /// Добавить пользовательские свойства
         /// </summary>
         /// <param name="builder"></param>
         protected abstract void AddBuilder(EntityTypeBuilder<T> builder);
 
         /// <summary>
+        /// Имя таблицы
         /// Table name
         /// </summary>
         /// <returns></returns>

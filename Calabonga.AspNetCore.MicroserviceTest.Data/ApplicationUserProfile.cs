@@ -4,6 +4,7 @@ using Calabonga.AspNetCore.MicroserviceTest.Models.Base;
 namespace Calabonga.AspNetCore.MicroserviceTest.Data
 {
     /// <summary>
+    ///Пользователь регистрационной информацией (пользователь приложения)
     /// Represent person with login information (ApplicationUser)
     /// </summary>
     public class ApplicationUserProfile : Auditable

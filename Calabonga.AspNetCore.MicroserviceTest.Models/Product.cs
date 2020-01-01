@@ -23,19 +23,19 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Models
         /// <summary>
         /// Уникальный номер Guid(id) каталога
         /// </summary>
-        public Guid CatalogId { get; set; }
+        public Guid CategoryId { get; set; }
 
         /// <summary>
         /// Свойство каталога. Для работы с экземпляром класса
         /// </summary>
-        public virtual Catalog Catalog { get; set; }
+        public virtual Category Category { get; set; }
 
 
          /// <summary>
          // Цена товара.
         //  Price product
         /// </summary>
-        public int Price { get; set; }
+        public int? Price { get; set; }
 
     }
 }

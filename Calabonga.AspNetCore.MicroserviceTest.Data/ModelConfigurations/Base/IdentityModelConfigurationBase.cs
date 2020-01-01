@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace Calabonga.AspNetCore.MicroserviceTest.Data.ModelConfigurations.Base
 {
     /// <summary>
+    /// Модель базовой конфигурации проверки и аудита
     /// Audit-able Model Configuration base
     /// </summary>
     /// <typeparam name="T"></typeparam>
@@ -20,12 +21,14 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Data.ModelConfigurations.Base
         }
 
         /// <summary>
+        /// Добавить пользовательские свойства 
         /// Add custom properties for your entity
         /// </summary>
         /// <param name="builder"></param>
         protected abstract void AddBuilder(EntityTypeBuilder<T> builder);
 
         /// <summary>
+        /// Имя таблицы
         /// Table name
         /// </summary>
         /// <returns></returns>

@@ -6,10 +6,24 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 namespace Calabonga.AspNetCore.MicroserviceTest.Data
 {
     /// <summary>
+    /// Абстракция для базы данных
     /// Abstraction for Database (EntityFramework)
     /// </summary>
     public interface IApplicationDbContext
     {
+        #region Бизнес логика
+
+        /// <summary>
+        /// Связь с БД с таблицей котигории 
+        /// </summary>
+        DbSet<Category> Categories { get; set; }
+
+        /// <summary>
+        /// Связь с БД с таблицей товары
+        /// </summary>
+        DbSet<Product> Products { get; set; }
+
+        #endregion
 
         #region System
 

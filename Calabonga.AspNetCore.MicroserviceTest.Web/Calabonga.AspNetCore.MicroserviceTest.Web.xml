@@ -6,7 +6,7 @@
     <members>
         <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.AppStart.ConfigureApplication">
             <summary>
-            Pipeline configuration
+            Основные конфигуорации конвеера зависимостей Pipeline configuration
             </summary>
         </member>
         <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.AppStart.ConfigureApplication.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)">
@@ -19,7 +19,7 @@
         </member>
         <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.AppStart.ConfigureServicesBase">
             <summary>
-            ASP.NET Core services registration and configurations
+            ASP.NET Core регистрация и настройка сервисов services registration and configurations
             </summary>
         </member>
         <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.AppStart.ConfigureServicesBase.Configure(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
