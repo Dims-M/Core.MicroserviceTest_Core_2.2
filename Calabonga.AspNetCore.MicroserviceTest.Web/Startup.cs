@@ -8,6 +8,9 @@ using Microsoft.Extensions.Logging;
 
 namespace Calabonga.AspNetCore.MicroserviceTest.Web
 {
+    /// <summary>
+/// 
+/// </summary>
     public class Startup
     {
         public Startup(IConfiguration configuration)

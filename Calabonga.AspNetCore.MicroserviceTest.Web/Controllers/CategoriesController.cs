@@ -61,7 +61,11 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers
     /// Класс для проверки сущностей Категории 
     /// </summary>
     public class CategoryValidator : EntityValidator<Category>
-    {
+
+    {/// <summary>
+    /// 
+    /// </summary>
+    /// <param name="factory"></param>
         public CategoryValidator(IRepositoryFactory factory) 
             : base(factory)
         {
@@ -73,8 +77,8 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers
     /// </summary>
     public class CategoryViewModelFactory : ViewModelFactory<Category, CategoryCreateViewModel, CategoryUpdateViewModel>
     {
-        public IUnitOfWork<ApplicationDbContext, ApplicationUser, ApplicationRole> _unitOfWork;
-        private IMapper _mapper;
+        public readonly IUnitOfWork<ApplicationDbContext, ApplicationUser, ApplicationRole> _unitOfWork;
+        private readonly IMapper _mapper;
 
         //Конструктор по умолчанию
         /// <summary>

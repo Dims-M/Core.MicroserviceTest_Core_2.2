@@ -9,6 +9,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Validations
     /// </summary>
     public class LogValidator : EntityValidator<Log>
     {
+       
         /// <inheritdoc />
         public LogValidator(IRepositoryFactory factory) : base(factory)
         {
