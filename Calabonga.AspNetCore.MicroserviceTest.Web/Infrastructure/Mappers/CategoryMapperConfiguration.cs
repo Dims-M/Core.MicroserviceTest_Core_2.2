@@ -24,7 +24,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Mappers
         public CategoryMapperConfiguration()
         {
 
-        CreateMap<Models.Category, Controllers.CategoryViewModel>();
+        CreateMap<Models.Category, CategoryViewModel>();
         CreateMap<Models.Category, CategoryUpdateViewModel>();
 
             CreateMap<EntityFrameworkCore.UnitOfWork.IPagedList<Models.Category>, EntityFrameworkCore.UnitOfWork.IPagedList<Controllers.CategoryViewModel>>()

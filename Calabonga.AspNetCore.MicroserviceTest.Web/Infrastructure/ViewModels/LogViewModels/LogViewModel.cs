@@ -6,11 +6,11 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.Lo
     /// Вывод моделей ViewModel
     /// Log ViewModel
     /// </summary>
-    public class CategoryViewModel : ViewModelBase
+    public class LogViewModel : ViewModelBase
     {
 
-        CategoryViewModel()
-        {}
+        //CategoryViewModel()
+        //{}
 
         /// <summary>
         /// Created at

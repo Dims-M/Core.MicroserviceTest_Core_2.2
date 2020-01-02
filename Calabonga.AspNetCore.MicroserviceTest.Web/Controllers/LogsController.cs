@@ -18,7 +18,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers
     /// <summary>
     ///Контроллер Лога . 
     /// </summary>
-    public class LogsController : ReadOnlyController<Category, Infrastructure.ViewModels.LogViewModels.CategoryViewModel, PagedListQueryParams>
+    public class LogsController : ReadOnlyController<Category, Infrastructure.ViewModels.LogViewModels.LogViewModel, PagedListQueryParams>
     {
         /// <summary>
         /// Конструктор по умолчанию.

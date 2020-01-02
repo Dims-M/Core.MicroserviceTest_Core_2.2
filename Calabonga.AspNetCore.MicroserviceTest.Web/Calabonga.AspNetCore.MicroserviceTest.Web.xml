@@ -2103,38 +2103,38 @@
             Exception message
             </summary>
         </member>
-        <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel">
+        <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.LogViewModel">
             <summary>
             Вывод моделей ViewModel
             Log ViewModel
             </summary>
         </member>
-        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel.CreatedAt">
+        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.LogViewModel.CreatedAt">
             <summary>
             Created at
             </summary>
         </member>
-        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel.Logger">
+        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.LogViewModel.Logger">
             <summary>
             Logger name
             </summary>
         </member>
-        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel.Level">
+        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.LogViewModel.Level">
             <summary>
             Level
             </summary>
         </member>
-        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel.Message">
+        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.LogViewModel.Message">
             <summary>
             Message text
             </summary>
         </member>
-        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel.ThreadId">
+        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.LogViewModel.ThreadId">
             <summary>
             Thread ID
             </summary>
         </member>
-        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel.ExceptionMessage">
+        <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.LogViewModel.ExceptionMessage">
             <summary>
             ExceptionMessage
             </summary>

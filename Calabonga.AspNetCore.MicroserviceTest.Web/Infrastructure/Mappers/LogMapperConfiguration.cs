@@ -17,10 +17,10 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Mappers
             //CreateMap<LogCreateViewModel, Log>()
             //    .ForMember(x => x.Id, o => o.Ignore());
 
-            CreateMap<Category, CategoryViewModel>();
+            CreateMap<Category, LogViewModel>();
 
-            CreateMap<IPagedList<Log>, IPagedList<CategoryViewModel>>()
-                .ConvertUsing<PagedListConverter<Log, CategoryViewModel>>();
+            CreateMap<IPagedList<Log>, IPagedList<LogViewModel>>()
+                .ConvertUsing<PagedListConverter<Log, LogViewModel>>();
         }
     }
 }
