@@ -3,10 +3,15 @@
 namespace Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels
 {
     /// <summary>
+    /// Вывод моделей ViewModel
     /// Log ViewModel
     /// </summary>
     public class CategoryViewModel : ViewModelBase
     {
+
+        CategoryViewModel()
+        {}
+
         /// <summary>
         /// Created at
         /// </summary>
@@ -33,7 +38,7 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.Lo
         public string ThreadId { get; set; }
 
         /// <summary>
-        /// 
+        /// ExceptionMessage
         /// </summary>
         public string ExceptionMessage { get; set; }
     }

@@ -525,6 +525,30 @@
             Контроллер для работы с категориями
             </summary>
         </member>
+        <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoriesController.#ctor(Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Managers.Base.IEntityManager{Calabonga.AspNetCore.MicroserviceTest.Models.Category,Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryCreateViewModel,Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryUpdateViewModel},Microsoft.Extensions.Options.IOptions{Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Settings.CurrentAppSettings},Calabonga.EntityFrameworkCore.UnitOfWork.IUnitOfWork{Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationDbContext,Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationUser,Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationRole},Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Services.IAccountService)">
+            <summary>
+            
+            </summary>
+            <param name="entityManager"></param>
+            <param name="options"></param>
+            <param name="unitOfWork"></param>
+            <param name="accountService"></param>
+        </member>
+        <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryUpdateViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryCreateViewModel">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryValidator">
             <summary>
             Класс для проверки сущностей Категории 
@@ -2070,6 +2094,7 @@
         </member>
         <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel">
             <summary>
+            Вывод моделей ViewModel
             Log ViewModel
             </summary>
         </member>
@@ -2100,7 +2125,7 @@
         </member>
         <member name="P:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.LogViewModels.CategoryViewModel.ExceptionMessage">
             <summary>
-            
+            ExceptionMessage
             </summary>
         </member>
         <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.ViewModels.ViewModelBase">

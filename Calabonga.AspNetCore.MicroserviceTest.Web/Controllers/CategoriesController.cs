@@ -25,20 +25,33 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers
     public class CategoriesController : WritableController<Category, CategoryCreateViewModel, CategoryUpdateViewModel, CategoryViewModel, PagedListQueryParams>
     {
         //Конструктор по умолчанию
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="entityManager"></param>
+        /// <param name="options"></param>
+        /// <param name="unitOfWork"></param>
+        /// <param name="accountService"></param>
         public CategoriesController(IEntityManager<Category, CategoryCreateViewModel, CategoryUpdateViewModel> entityManager, IOptions<CurrentAppSettings> options, IUnitOfWork<ApplicationDbContext, ApplicationUser, ApplicationRole> unitOfWork, IAccountService accountService) 
             : base(entityManager, options, unitOfWork, accountService)
         {
         }
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public class CategoryViewModel : ViewModelBase
     {
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public class CategoryUpdateViewModel : ViewModelBase
     {
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public class CategoryCreateViewModel : IViewModel
     {
 

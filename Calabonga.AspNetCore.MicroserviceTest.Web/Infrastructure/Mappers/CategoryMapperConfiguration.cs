@@ -18,6 +18,9 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Mappers
     /// </summary>
     public class CategoryMapperConfiguration : MapperConfigurationBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public CategoryMapperConfiguration()
         {
 
