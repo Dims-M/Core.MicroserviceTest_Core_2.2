@@ -14,10 +14,10 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Mappers
         /// <inheritdoc />
         public LogMapperConfiguration()
         {
-            //CreateMap<LogCreateViewModel, Log>()
-            //    .ForMember(x => x.Id, o => o.Ignore());
+            CreateMap<LogCreateViewModel, Log>()
+                .ForMember(x => x.Id, o => o.Ignore());
 
-            CreateMap<Category, LogViewModel>();
+            CreateMap<Log, LogViewModel>();
 
             CreateMap<IPagedList<Log>, IPagedList<LogViewModel>>()
                 .ConvertUsing<PagedListConverter<Log, LogViewModel>>();
