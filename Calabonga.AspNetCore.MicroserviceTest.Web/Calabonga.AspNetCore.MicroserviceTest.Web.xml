@@ -527,12 +527,20 @@
         </member>
         <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoriesController.#ctor(Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Managers.Base.IEntityManager{Calabonga.AspNetCore.MicroserviceTest.Models.Category,Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryCreateViewModel,Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryUpdateViewModel},Microsoft.Extensions.Options.IOptions{Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Settings.CurrentAppSettings},Calabonga.EntityFrameworkCore.UnitOfWork.IUnitOfWork{Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationDbContext,Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationUser,Calabonga.AspNetCore.MicroserviceTest.Data.ApplicationRole},Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Services.IAccountService)">
             <summary>
-            
+            //Конструктор
             </summary>
             <param name="entityManager"></param>
             <param name="options"></param>
             <param name="unitOfWork"></param>
             <param name="accountService"></param>
+        </member>
+        <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryManager">
+            <summary>
+            // Calabonga: update summary (2019-06-01 02:05 CategoriesController)
+            </summary>
+        </member>
+        <member name="M:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryManager.#ctor(AutoMapper.IMapper,Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Factories.Base.IViewModelFactory{Calabonga.AspNetCore.MicroserviceTest.Models.Category,Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryCreateViewModel,Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryUpdateViewModel},Calabonga.AspNetCore.MicroserviceTest.Web.Infrastructure.Validations.Base.IEntityValidator{Calabonga.AspNetCore.MicroserviceTest.Models.Category})">
+            <inheritdoc />
         </member>
         <member name="T:Calabonga.AspNetCore.MicroserviceTest.Web.Controllers.CategoryViewModel">
             <summary>

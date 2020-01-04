@@ -24,9 +24,11 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers
     /// </summary>
     public class CategoriesController : WritableController<Category, CategoryCreateViewModel, CategoryUpdateViewModel, CategoryViewModel, PagedListQueryParams>
     {
-        //Конструктор по умолчанию
+        //Конструктор 
+
+
         /// <summary>
-        /// 
+        /// //Конструктор
         /// </summary>
         /// <param name="entityManager"></param>
         /// <param name="options"></param>
@@ -37,6 +39,20 @@ namespace Calabonga.AspNetCore.MicroserviceTest.Web.Controllers
         {
         }
     }
+
+    /// <summary>
+    /// // Calabonga: update summary (2019-06-01 02:05 CategoriesController)
+    /// </summary>
+    public class CategoryManager : EntityManager<Category, CategoryCreateViewModel, CategoryUpdateViewModel>
+    {
+        /// <inheritdoc />
+        public CategoryManager(IMapper mapper, IViewModelFactory<Category, CategoryCreateViewModel, CategoryUpdateViewModel> viewModelFactory, IEntityValidator<Category> validator)
+        : base(mapper, viewModelFactory, validator)
+    {
+    }
+    }
+
+
     /// <summary>
     /// 
     /// </summary>
